@@ -1,6 +1,10 @@
 import streamlit as st
 
 def calculate_allowed_change(original_value, relative_limit, absolute_limit):
+    # Apply the relative limit below 10 if it is smaller than the absolute limit
+    relative_limit = max(relative_limit, 10.0)
+    
+    # Calculate the allowable adjustment
     relative_adjustment = original_value * relative_limit / 100.0
     allowed_change = min(relative_adjustment, absolute_limit)
     return allowed_change
@@ -64,7 +68,7 @@ def main():
     st.write(f"5. Particle Size: Original Particle Size: {original_particle_size}µm, Allowed Reduction: Up to {allowed_particle_size_reduction:.2f}µm")
     st.write(f"6. Column Length: Original Length: {original_column_length}mm, Allowed Change: From {original_column_length - allowed_column_length_change:.2f} to {original_column_length + allowed_column_length_change:.2f}")
     st.write(f"7. Column Inner Diameter: Original Diameter: {original_inner_diameter}mm, Allowed Change: From {original_inner_diameter - allowed_inner_diameter_change:.2f} to {original_inner_diameter + allowed_inner_diameter_change:.2f}")
-    st.write(f"9. Column Temperature: Original Temperature: {original_temperature}°C, Allowed Change: ± {allowed_temperature_change}°C")
+    st.write(f"9. Column Temperature: Original Temperature: {original_temperature}°C, Allowed Change: From {original_temperature - allowed_temperature_change:.2f} to {original_temperature + allowed_temperature_change:.2f}")
     st.write(f"10. Flow Rate: Original Flow Rate: {original_flow_rate}mL/min, Allowed Change: From {original_flow_rate - allowed_flow_rate_change:.2f} to {original_flow_rate + allowed_flow_rate_change:.2f}")
 
 if __name__ == "__main__":
