@@ -12,7 +12,7 @@ def calculate_allowed_change(original_value, relative_limit, absolute_limit):
 def main():
     st.title("Allowable Adjustments for Chromatography Parameters")
 
-    st.sidebar.header("Input Parameters")
+    #st.sidebar.header("Input Parameters")
 
     # pH Adjustment
     st.sidebar.subheader("Mobile Phase pH")
