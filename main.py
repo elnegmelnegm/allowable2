@@ -64,12 +64,12 @@ def main():
     st.subheader("Results")
 
     st.write(f"1. Mobile Phase pH: Original pH: {original_ph}, Allowed Change: From {original_ph-0.2:.2f} to {original_ph+0.2:.2f}")
-    st.write(f"2. Concentration of Salts in Buffer: Original Concentration: {original_concentration}mM, Allowed Change: From {original_concentration - allowed_concentration_change:.2f} to {original_concentration + allowed_concentration_change:.2f}")
+    st.write(f"2. Concentration of Salts in Buffer: Original Concentration: {original_concentration}mM, Allowed Change: From {original_concentration - allowed_concentration_change:.2f} to {original_concentration + allowed_concentration_change:.2f} mM")
     st.write(f"3. Particle Size: Original Particle Size: {original_particle_size}µm, Allowed Reduction: Up to {allowed_particle_size_reduction:.2f}µm")
-    st.write(f"4. Column Length: Original Length: {original_column_length}mm, Allowed Change: From {original_column_length - allowed_column_length_change:.0f} to {original_column_length + allowed_column_length_change:.0f}")
+    st.write(f"4. Column Length: Original Length: {original_column_length}mm, Allowed Change: From {original_column_length - allowed_column_length_change:.0f} to {original_column_length + allowed_column_length_change:.0f} mm")
     st.write(f"5. Column Inner Diameter: Original Diameter: {original_inner_diameter}mm, Allowed Change: From {original_inner_diameter - allowed_inner_diameter_change:.2f} to {original_inner_diameter + allowed_inner_diameter_change:.2f}")
-    st.write(f"6. Column Temperature: Original Temperature: {original_temperature}°C, Allowed Change: From {original_temperature - allowed_temperature_change:.0f} to {original_temperature + allowed_temperature_change:.0f}")
-    st.write(f"7. Flow Rate: Original Flow Rate: {original_flow_rate}mL/min, Allowed Change: From {original_flow_rate - allowed_flow_rate_change:.1f} to {original_flow_rate + allowed_flow_rate_change:.1f}")
+    st.write(f"6. Column Temperature: Original Temperature: {original_temperature}°C, Allowed Change: From {original_temperature - allowed_temperature_change:.0f} to {original_temperature + allowed_temperature_change:.0f} °C")
+    st.write(f"7. Flow Rate: Original Flow Rate: {original_flow_rate}mL/min, Allowed Change: From {original_flow_rate - allowed_flow_rate_change:.1f} to {original_flow_rate + allowed_flow_rate_change:.1f} mL/min")
 
 if __name__ == "__main__":
     main()
