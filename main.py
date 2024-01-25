@@ -1,5 +1,16 @@
 import streamlit as st
+st.set_page_config(
+    page_title="ُEDA AI Chat",
+    page_icon="https://www.edaegypt.gov.eg/media/wc3lsydo/group-287.png",
+    layout="wide",
+)
 
+st.markdown('''
+<img src="https://www.edaegypt.gov.eg/media/wc3lsydo/group-287.png" width="250" height="100">''', unsafe_allow_html=True)
+
+#st.title("EDA Smart Lab App")
+#st.markdown('''
+#Powered by CADC support team to expedite and enhance laboratory analysis.''', unsafe_allow_html=True)
 def calculate_allowed_change(original_value, relative_limit, absolute_limit):
     # Apply the relative limit below 10 if it is smaller than the absolute limit
     relative_limit = max(relative_limit, 10.0)
