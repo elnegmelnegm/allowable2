@@ -17,7 +17,7 @@ def main():
     # pH Adjustment
     st.sidebar.subheader("Mobile Phase pH")
     original_ph = st.sidebar.number_input("Original pH", min_value=0.0, max_value=14.0, step=0.1, value=7.6)
-    ph_relative_limit = 0.2
+    ph_relative_limit = original_ph+0.2
     ph_absolute_limit = 1.0
 
     # Concentration of Salts
@@ -63,7 +63,7 @@ def main():
     # Display results
     st.subheader("Results")
 
-    st.write(f"1. Mobile Phase pH: Original pH: {original_ph}, Allowed Change: From {original_ph - allowed_ph_change:.2f} to {original_ph + allowed_ph_change:.2f}")
+    st.write(f"1. Mobile Phase pH: Original pH: {original_ph}, Allowed Change: From {original_ph - 0.2:.2f} to {original_ph + 0.2:.2f}")
     st.write(f"2. Concentration of Salts in Buffer: Original Concentration: {original_concentration}mM, Allowed Change: From {original_concentration - allowed_concentration_change:.2f} to {original_concentration + allowed_concentration_change:.2f}")
     st.write(f"5. Particle Size: Original Particle Size: {original_particle_size}µm, Allowed Reduction: Up to {allowed_particle_size_reduction:.2f}µm")
     st.write(f"6. Column Length: Original Length: {original_column_length}mm, Allowed Change: From {original_column_length - allowed_column_length_change:.2f} to {original_column_length + allowed_column_length_change:.2f}")
